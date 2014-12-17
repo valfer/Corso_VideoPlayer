@@ -62,7 +62,7 @@ class AVPlayerVC : UIViewController {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                self.playerLayer .removeObserver(self, forKeyPath: "readyForDisplay")
+                self.playerLayer.removeObserver(self, forKeyPath: "readyForDisplay")
                 self.view.layer.addSublayer(self.playerLayer)
                 
             })
