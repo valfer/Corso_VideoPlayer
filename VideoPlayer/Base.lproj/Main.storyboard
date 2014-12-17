@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oPg-kx-BBz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--MPMoviePlayerController-->
+        <scene sceneID="UFU-4m-STf">
+            <objects>
+                <viewController id="zxh-gL-r5l" customClass="MPMoviePlayerControllerVC" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0H-SC-dk3"/>
+                        <viewControllerLayoutGuide type="bottom" id="RKQ-9C-VGV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8FI-32-NO2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y25-iB-Gst">
+                                <rect key="frame" x="16" y="260" width="67" height="30"/>
+                                <state key="normal" title="Play/Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="zxh-gL-r5l" eventType="touchUpInside" id="l0K-q9-4MF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MPMoviePlayerController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-GP-5sY">
+                                <rect key="frame" x="200" y="52" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GzD-GP-5sY" firstAttribute="top" secondItem="e0H-SC-dk3" secondAttribute="bottom" constant="32" id="BMX-UO-2ky"/>
+                            <constraint firstAttribute="centerX" secondItem="GzD-GP-5sY" secondAttribute="centerX" constant="-0.5" id="d7S-53-bae"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MPMoviePlayerController" id="c7Q-eQ-9wV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFP-7S-XDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="693"/>
+        </scene>
+        <!--AVPlayer-->
+        <scene sceneID="w3h-u9-gi3">
+            <objects>
+                <viewController id="qFM-8S-OxM" customClass="AVPlayerVC" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5cG-kF-yxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="LWZ-om-eSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4MA-b2-NRo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVPLayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npo-ed-Xwu">
+                                <rect key="frame" x="278" y="35" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ph-hT-mDI">
+                                <rect key="frame" x="16" y="238" width="67" height="30"/>
+                                <state key="normal" title="Play/Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="qFM-8S-OxM" eventType="touchUpInside" id="Cog-AP-qBN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="npo-ed-Xwu" secondAttribute="centerX" constant="-16" id="3Zt-yz-eXf"/>
+                            <constraint firstItem="npo-ed-Xwu" firstAttribute="top" secondItem="5cG-kF-yxd" secondAttribute="bottom" constant="15" id="WlQ-WI-Fdu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AVPlayer" id="EvM-MD-fBi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUN-5B-pOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1520"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0k9-WW-EE1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oPg-kx-BBz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sgI-gW-fW8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zxh-gL-r5l" kind="relationship" relationship="viewControllers" id="04I-af-x1n"/>
+                        <segue destination="qFM-8S-OxM" kind="relationship" relationship="viewControllers" id="ADB-xo-Sl4"/>
+                        <segue destination="U1W-MP-yCX" kind="relationship" relationship="viewControllers" id="Wgc-UB-Vcz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k92-cL-k0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="354"/>
+        </scene>
+        <!--AVPlayerViewControllerVC-->
+        <scene sceneID="Qiw-OT-dCf">
+            <objects>
+                <viewController id="U1W-MP-yCX" customClass="AVPlayerViewControllerVC" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="puQ-n5-Ha8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVx-zp-xat"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v6Z-3M-mk7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVPlayerViewControllerVC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAH-0r-GHH">
+                                <rect key="frame" x="212" y="35" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59k-q6-84H">
+                                <rect key="frame" x="16" y="238" width="30" height="30"/>
+                                <state key="normal" title="Apri">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="U1W-MP-yCX" eventType="touchUpInside" id="Hkt-zW-3XG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qAH-0r-GHH" secondAttribute="centerX" constant="-16" id="6eI-pn-Lbx"/>
+                            <constraint firstItem="qAH-0r-GHH" firstAttribute="top" secondItem="puQ-n5-Ha8" secondAttribute="bottom" constant="15" id="O3H-DC-Wfy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AVPlayerViewControllerVC" id="35p-rV-hV5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpv-b8-LlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="1520"/>
+        </scene>
+    </scenes>
+</document>
